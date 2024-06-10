@@ -1,0 +1,10 @@
+-- create if not exists images table
+CREATE TABLE IF NOT EXISTS images (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  url TEXT  UNIQUE,
+  path TEXT NOT NULL UNIQUE,
+  alt TEXT NOT NULL,
+  pred TEXT NOT NULL,
+  val TEXT,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);

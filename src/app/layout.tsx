@@ -3,10 +3,9 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontNotoSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { Menu } from "@/components/menu";
 import { StyleSwitcher } from "@/components/style-switcher";
-
+import { Toaster } from "sonner";
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -26,7 +25,6 @@ export default function MyApp({ children }: LayoutProps) {
       suppressHydrationWarning
       className='overflow-clip bg-black'
     >
-      <head />
       <body
         className='overflow-clip bg-transparent antialiased scrollbar-none'
         style={{
@@ -42,17 +40,14 @@ export default function MyApp({ children }: LayoutProps) {
         >
           <div className='h-screen overflow-clip '>
             <Menu />
-            <div
-              className={cn(
-                "h-screen overflow-auto border-t bg-background pb-8"
-              )}
-            >
+            <div className={cn("h-screen overflow-auto bg-background pb-8")}>
               {children}
             </div>
           </div>
-          <TailwindIndicator />
+          {/* <TailwindIndicator /> */}
         </ThemeProvider>
         <StyleSwitcher />
+        <Toaster />
       </body>
     </html>
   );

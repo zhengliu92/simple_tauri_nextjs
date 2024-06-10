@@ -1,3 +1,4 @@
+import CardPage from "@/components/card/card";
 import PlaygroundPage from "@/components/playground/playgroundPage";
 import { Metadata } from "next";
 
@@ -7,5 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PlaygroundPage />;
+  // return <PlaygroundPage />;
+  return <CardPage />;
 }

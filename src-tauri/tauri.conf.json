@@ -1,9 +1,10 @@
 {
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build",
     "devPath": "http://localhost:1420",
-    "distDir": "../dist"
+    "distDir": "../out"
   },
   "package": {
     "productName": "app1",
@@ -12,6 +13,9 @@
   "tauri": {
     "allowlist": {
       "all": false,
+      "notification": {
+        "all": true
+      },
       "fs": {
         "all": true,
         "readFile": true,
@@ -23,26 +27,37 @@
         "removeFile": true,
         "renameFile": true,
         "exists": true,
-        "scope": []
+        "scope": ["$HOME/**"]
+      },
+      "protocol": {
+        "all": true,
+        "asset": true,
+        "assetScope": ["**/*"]
       },
       "dialog": {
         "all": true,
+        "ask": true,
+        "confirm": true,
+        "message": true,
         "open": true,
         "save": true
       },
       "shell": {
         "all": false,
         "open": true
+      },
+      "path": {
+        "all": true
       }
     },
     "windows": [
       {
         "title": "zhst-app",
-        "width": 1200,
-        "height": 900,
+        "width": 1000,
+        "height": 800,
         "center": true,
         "transparent": true,
-        "resizable": true
+        "resizable": false
       }
     ],
     "security": {
@@ -51,7 +66,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "build1",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",

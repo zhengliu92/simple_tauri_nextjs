@@ -12,15 +12,15 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 
-import { CodeViewer } from "./playground/code-viewer";
-import { MaxLengthSelector } from "./playground/maxlength-selector";
-import { ModelSelector } from "./playground/model-selector";
-import { PresetActions } from "./playground/preset-actions";
-import { PresetSave } from "./playground/preset-save";
-import { PresetSelector } from "./playground/preset-selector";
-import { PresetShare } from "./playground/preset-share";
-import { TemperatureSelector } from "./playground/temperature-selector";
-import { TopPSelector } from "./playground/top-p-selector";
+import { CodeViewer } from "./code-viewer";
+import { MaxLengthSelector } from "./maxlength-selector";
+import { ModelSelector } from "./model-selector";
+import { PresetActions } from "./preset-actions";
+import { PresetSave } from "./preset-save";
+import { PresetSelector } from "./preset-selector";
+import { PresetShare } from "./preset-share";
+import { TemperatureSelector } from "./temperature-selector";
+import { TopPSelector } from "./top-p-selector";
 import { models, types } from "@/data/models";
 import { presets } from "@/data/presets";
 
