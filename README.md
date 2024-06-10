@@ -21,7 +21,5 @@ pnpm tauri build
 
 ## Demo
 
-<video width="600" height="auto" controls>
-    <source src="demo_vedio.mp4" type="video/mp4">
-</video>
-```
+https://github.com/zhengliu92/simple_tauri_nextjs/assets/46971172/16abed0d-6760-44b2-a058-a6e3da330400
+
