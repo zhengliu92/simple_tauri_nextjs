@@ -1,4 +1,4 @@
-# A Simple image Annotation Tool: Tauri + Nextjs + Sqlite
+# A Simple Image Annotation Tool: Tauri + Nextjs + Sqlite
 
 ## How to start
 
